@@ -1,0 +1,21 @@
+#the scope bug
+
+scope  bug as refferred by  effective python occurs when you assign a variable in a new scope 
+take this problem in a closure
+def outer_function(items):
+  found=false
+  def inner_function(item):
+  for value in items:
+    if value is  item:
+       found=true
+       return value
+
+
+
+
+
+   group.sort(key=inner_function)
+   return found
+ most would assume that given an iterable  to the outer function the expected value would be true if item exists however in python3 variable assignment is very special first  it checks whether the variable exists within the scope if it does the new value is assigned to the variable else a new variable is   created with the valuer
+
+ however there is a solution to this one you can use the unlocal keyword  or  make  a class

@@ -1,0 +1,28 @@
+#reference and pointer
+reference in c++ are alias to a variable
+defined by 
+int x=5;
+int &y =x
+cout<<y<<end will give the value 5 
+pointer are actually variable that store memory addresses to a varible
+for example 
+int *w=&x will give the memory addresses  in hex for example d213243
+references in rust
+they behave like deferenced like differenced pointers but internally represented as raw pointes
+two types
+shared referencede denotedd by & and exclusive/mutable references denoted by &mut
+rules
+you cannot have two shared references as it may goes data racing 
+2)you cannot have mutable reference and immutable references as you want to guarentee the person on readonly that the data is not going to change
+
+
+
+???raw pointers actually is what you would see in c/c++ it gives you the memory address
+???deferencing can actually occur but it is thought as unsafe rust so you have got to use the unsafe keyword
+
+let t=&t as mut t  //getting raw pointer returns the memory address
+dereferencing a raw pointer gives the actual value at that memory address
+unsafe{
+let h=*t;
+	
+}
